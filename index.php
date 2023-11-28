@@ -105,11 +105,15 @@
     <body>
         <h1>My Subjects</h1>
         <a href="forms/addform.php" class="addbtn">Add Subject</a><br/><br/>
+        <a href="forms/addsyllabusform.php" class="addbtn">Add Syllabuss</a><br/><br/>
         <table>
             <tr style="background:#CCCCCC;">
                 <th>ID</th>
                 <th>Subject Code</th>
                 <th>Subject Name</th>
+                <th>Syllabus ID</th>
+                <th>Syllabus Code</th>
+                <th>Syllabus Author</th>
                 <th>Action</th>
             </tr>
             <?php
@@ -118,6 +122,9 @@
                     echo "<td>".$res['Subject_ID']."</td>";
                     echo "<td>".$res['Subject_Code']."</td>";
                     echo "<td>".$res['Subject_Name']."</td>";
+                    echo "<td>".$res['Syllabus_ID']."</td>";
+                    echo "<td>".$res['Syllabus_Code']."</td>";
+                    echo "<td>".$res['Syllabus_Author']."</td>";
                     echo "<td>
                             <a href=\"forms/editform.php?id={$res['Subject_ID']}\" class=\"edit\">Edit</a> |
                             <a href=\"functions/delete.php?id={$res['Subject_ID']}\" onClick=\"return confirm('Are you sure you want to delete?')\" class=\"delete\">Delete</a>
